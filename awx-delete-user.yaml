@@ -1,0 +1,12 @@
+## USERNAME değişkendir.
+---
+- name: Delete the user
+  hosts: all
+  remote_user: USERNAME
+  tasks:
+    - name: Delete the user
+      ansible.builtin.user:
+        name: matt
+        state: absent
+        remove: yes
+

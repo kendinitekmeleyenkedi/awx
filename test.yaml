@@ -1,0 +1,6 @@
+---
+- name: hostname
+  hosts: all
+  tasks:
+          - name: hostname
+            command: hostname

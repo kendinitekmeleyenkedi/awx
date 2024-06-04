@@ -1,0 +1,16 @@
+## mkpasswd --method=sha-512 ile cli da password oluştur.
+## USERNAME değişkendir.
+---
+- name: Create the user
+  hosts: [all]
+  remote_user: ansible
+  tasks:
+    - name: Create the user
+      ansible.builtin.user:
+        name: USERNAME
+        comment: USERNAME
+        group: sudo
+        shell: /bin/bash
+        password: '$6$ypYbt0bfSlh8xV$evOOkZT0P6IYUAYoS4nafZaswPhvcZEc5IVgUFxsXSXQzbsFBeURG9W.FDvMyDTNxEYeBudAG32Hy8fhmlpJM/' #mkpasswd --method=sha-512
+        create_home: yes
+        home: /home/USERNAME

@@ -4,3 +4,5 @@
   tasks:
           - name: hostname
             command: hostname
+            - name: timedatectl
+            command: timedatectl

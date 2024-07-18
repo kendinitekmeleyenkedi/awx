@@ -1,8 +1,8 @@
 ---
-- name: Create Ansible folder
+- name: check-users
   hosts: all
   become: true
 
   tasks:
-    - name: Create ansible directory
-      command: mkdir /home/ttttttttttttttttttt
+    - name: check-users
+      command: more /etc/passwd

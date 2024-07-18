@@ -5,4 +5,4 @@
 
   tasks:
     - name: check-users
-      command: more /etc/passwd
+      command: df -lh

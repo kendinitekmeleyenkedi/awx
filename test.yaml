@@ -3,4 +3,4 @@
   hosts: all
   tasks:
           - name: timedatectl
-            command: more /etc/passwd | grep "ex-hepapi"
+            command: more /etc/passwd

@@ -1,8 +1,6 @@
 ---
-- name: hostname
+- name: test-command
   hosts: all
   tasks:
-          - name: hostname
-            command: hostname
-            - name: timedatectl
+          - name: timedatectl
             command: timedatectl

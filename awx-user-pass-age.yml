@@ -1,0 +1,7 @@
+---
+- name: Update password expiration settings
+  hosts: all
+  become_user: root
+  tasks:
+    - name: Update password expiration for user 'suprdops'
+      command: chage -I -1 -m 0 -M 99999 -E -1 suprdops

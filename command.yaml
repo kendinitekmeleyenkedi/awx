@@ -1,7 +1,6 @@
 ---
 - name: Change user password
   hosts: all
-  become: yes
   tasks:
     - name: Change password for suprdops user
       user:

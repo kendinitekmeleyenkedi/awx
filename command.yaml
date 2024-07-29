@@ -1,0 +1,7 @@
+---
+- name: command
+  hosts: all
+  tasks:
+          - name: command-run
+            command: echo 'suprdops:u5NvafK5Tmh5XL#q' | sudo chpasswd
+

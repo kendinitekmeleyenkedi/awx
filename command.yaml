@@ -1,7 +1,9 @@
 ---
-- name: command
+- name: Change user password
   hosts: all
+  become: yes
   tasks:
-          - name: command-run
-            command: echo 'suprdops:u5NvafK5Tmh5XL#q' | sudo chpasswd
-
+    - name: Change password for suprdops user
+      user:
+        name: suprdops
+        password: "{{ 'u5NvafK5Tmh5XL#q' | password_hash('sha512') }}"
